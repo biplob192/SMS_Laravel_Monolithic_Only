@@ -14,5 +14,14 @@ foreach (config('tenancy.central_domains') as $domain) {
         Route::get('/', function () {
             return view('welcome'); // central app
         });
+
+        Route::get('/login', function () {
+            return view('login');
+        })->name('login');
+
+        Route::get('/register', function () {
+            // return view('login');
+            return 'Register page';
+        })->name('register');
     });
 }
