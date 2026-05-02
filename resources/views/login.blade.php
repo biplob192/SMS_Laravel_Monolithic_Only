@@ -29,7 +29,7 @@
 
             <!-- Login Card -->
             <div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-8 border border-gray-200 dark:border-gray-800">
-                <form method="POST" action="{{ route('login') }}">
+                <form method="POST" action="{{ route('auth.login') }}">
                     @csrf
 
                     <!-- Email -->
@@ -100,7 +100,7 @@
                 <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-800">
                     <p class="text-center text-sm text-gray-600 dark:text-gray-400">
                         Don't have an account?
-                        <a href="{{ route('register') }}" class="font-medium text-blue-600 dark:text-blue-400 hover:underline ml-1">
+                        <a href="{{ route('auth.register') }}" class="font-medium text-blue-600 dark:text-blue-400 hover:underline ml-1">
                             Sign up
                         </a>
                     </p>
