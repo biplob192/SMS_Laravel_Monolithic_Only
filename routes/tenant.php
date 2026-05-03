@@ -25,5 +25,5 @@ Route::middleware([
     PreventAccessFromCentralDomains::class,
 ])->group(function () {
     // Landing page
-    Route::get('/', fn() => view('tenant_landing_page'))->name('tenant.home');
+    Route::get('/', fn() => view('landing_page_tenant'))->name('tenant.home');
 });

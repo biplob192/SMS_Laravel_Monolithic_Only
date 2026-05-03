@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 Route::group(['domain' => config('tenancy.central_domains.0')], function () {
 
     // Landing page
-    Route::get('/', fn() => view('welcome'))->name('home');
+    Route::get('/', fn() => view('landing_page_central'))->name('home');
 
 
     // Auth routes
