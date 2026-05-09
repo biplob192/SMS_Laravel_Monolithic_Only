@@ -23,8 +23,8 @@ class CreateTenantsTable extends Migration
             $table->string('plan');
             $table->string('status')->default('active');
 
-            $table->timestamps();
             $table->json('data')->nullable();
+            $table->timestamps();
         });
     }
 
