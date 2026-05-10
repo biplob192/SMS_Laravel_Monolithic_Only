@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('tenant_exam_subjects', function (Blueprint $table) {
             $table->id();
             $table->foreignId('tenant_exam_id')->constrained('tenant_exams')->cascadeOnDelete();
-            $table->foreignId('subject_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('global_subject_id')->constrained()->cascadeOnDelete();
 
             $table->unsignedTinyInteger('written_mark')->default(0);
             $table->unsignedTinyInteger('written_pass_mark')->default(0);

@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('global_classes', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 100);
+            $table->unsignedTinyInteger('numeric_value');
+            $table->boolean('has_groups')->default(false);
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
     }

@@ -23,6 +23,9 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
+            GlobalGroupSeeder::class,
+            DesignationSeeder::class,
+            PlanSeeder::class,
             DummyTenantAndUsers::class,
         ]);
     }

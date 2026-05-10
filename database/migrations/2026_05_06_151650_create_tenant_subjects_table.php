@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('tenant_subjects', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('tenant_id')->constrained('tenants')->onDelete('cascade');
+            $table->foreignId('global_subject_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

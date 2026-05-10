@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('tenant_sections', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('tenant_id')->constrained('tenants')->onDelete('cascade');
+            $table->string('name', 150);
+            $table->string('code', 100)->nullable();
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
     }
